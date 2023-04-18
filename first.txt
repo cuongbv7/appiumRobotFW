@@ -1,0 +1,8 @@
+--variable udid:emulator-5554
+--variable system_port:8201
+--variable platformName:android
+--variable deviceName:nexus4
+
+
+
+

@@ -1,0 +1,26 @@
+*** Settings ***
+Library           AppiumLibrary    timeout=20    run_on_failure=Capture Page Screenshot
+Library           OperatingSystem
+Library           String
+Library           Collections
+Library           Process
+Library           pabot.PabotLib
+Resource          ../../resource/import.robot
+
+*** Variable ***
+
+
+*** Keywords ***
+Setup Test
+
+    ${package}=    Set Variable    org.wikipedia.alpha
+    ${activity}=    Set Variable    org.wikipedia.main.MainActivity
+
+    Set Tags    ${deviceName}
+    Run Keyword If   '${runOn}' == 'local'  Open Application   ${appium_server}    platformName=${platformName}    appPackage=${package}    appActivity=${activity}    noReset=false    fullReset=true    udid=${udid}    systemPort=${systemPort}    newCommandTimeout=10000    autoGrantPermissions=true    app=${EXECDIR}/app/WikipediaSample.apk
+    Run Keyword If   '${runOn}' == 'browserStack'  Open Application     ${appium_server}     deviceName=${deviceName}        platformName=${platformName}    appPackage=${package}    appActivity=${activity}    noReset=false    fullReset=true      systemPort=${systemPort}    newCommandTimeout=10000    autoGrantPermissions=true    app=${app_id}       build=browserstack-robot-framework    browserstack.local=false
+
+    implicit wait    10
+
+Teardown Test
+    Close Application

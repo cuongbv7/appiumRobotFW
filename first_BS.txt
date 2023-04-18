@@ -1,0 +1,9 @@
+--variable system_port:8201
+--variable platformName:android
+--variable deviceName:Samsung Galaxy S22 Ultra
+--variable platformVersion:12.0
+
+
+
+
+

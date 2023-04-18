@@ -1,0 +1,37 @@
+*** Settings ***
+Library         AppiumLibrary   timeout=10  run_on_failure=Capture Page Screenshot
+Library         OperatingSystem
+Library         String
+Library         Collections
+Library         Process
+Library         pabot.PabotLib
+Resource        ../../resource/import.robot
+
+*** Variable ***  
+
+*** Keywords ***
+Setup Test
+
+    ${package}=    Set Variable     org.wikipedia.alpha
+    ${app_id}       Set Variable    bs://9eaf75ab7fb2b970e8d7f9cbe791ecee064bd022
+    ${REMOTE_URL}=   Set Variable   https://vitcngbi_9My82d:ypfk8SS6zCTmwfBgzJKs@hub-cloud.browserstack.com/wd/hub
+
+    Open Application
+    ...   remote_url=${REMOTE_URL}
+    ...   app=${app_id}
+    ...   platformName=Android
+    ...   appPackage=${package}
+    ...   appActivity=org.wikipedia.main.MainActivity
+    ...   deviceName=Samsung Galaxy S21
+    ...   name=local_test
+    ...   build=browserstack-robot-framework
+    ...   browserstack.local=false
+    ...   autoGrantPermissions=true
+    Implicit Wait    10
+
+
+Teardown Test
+    Release value set
+    Close Application
+
+

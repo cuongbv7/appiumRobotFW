@@ -1,0 +1,36 @@
+==============================================================================
+Scenario                                                                      
+==============================================================================
+Scenario.Search                                                               
+==============================================================================
+Search with special keyword                                           Device2
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/src/scenario/Search.robot:24
+    T:  Search with special keyword    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/src/scenario/Search.robot:27
+      Then List of suggestions related to 'Adele' should be shown    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/src/step/SearchStep.robot:13
+      ${title} IN [ ${listSuggesion} ]    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/src/step/SearchStep.robot:13
+      ${title} = ['At sign', 'Harry Potter', "Harry Potter and the Philosopher's Stone"]    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/src/step/SearchStep.robot:14
+      Should Contain    ${title}    ${searchKeyword}
+      |  ${title} = ['At sign', 'Harry Potter', "Harry Potter and the Philosopher's Stone"] (list)
+      |  ${searchKeyword} = Adele (str)
+______________________________________________________________________________
+| FAIL |
+'['At sign', 'Harry Potter', "Harry Potter and the Philosopher's Stone"]' does not contain 'Adele'
+------------------------------------------------------------------------------
+Scenario.Search                                                       | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Scenario                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/cuong.bui/Documents/02.PersonalProject/Appium-Parallel/reports/pabot_results/2/output.xml

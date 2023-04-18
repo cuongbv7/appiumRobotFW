@@ -1,0 +1,5 @@
+--variable udid:emulator-5556
+--variable system_port:8202
+--variable platformName:android
+--variable deviceName:pixel4
+

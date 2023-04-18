@@ -1,0 +1,2 @@
+*** Settings ***
+Resource    ./SearchStep.robot

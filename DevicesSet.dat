@@ -1,0 +1,14 @@
+[Device1]
+tags=device1
+udid=emulator-5556
+system_port=8201
+deviceName=samsungS21
+platformName:android
+
+[Device2]
+tags=device2
+udid=emulator-5554
+system_port=8202
+deviceName=samsungS22
+platformName:android
+

@@ -1,0 +1,7 @@
+datasources:3f6a009d9db6e275947d345b8b9c0a7ec7667033
+commandlineoptions:176a5f0990728d90b78b1dff1ce372b1bc1946fa
+suitesfrom:no-suites-from-option
+file:40883ea0fde639f88fd172fac43eabc21d463e63
+--test Scenario.Search.Search with valid keyword
+--test Scenario.Search.Search with invalid keyword
+--test Scenario.Search.Search with special keyword
